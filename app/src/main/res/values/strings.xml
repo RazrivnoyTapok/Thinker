@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Thinker</string>
+    <string name="timed_greeting">Добрый вечер</string>
+    <string name="start">Начнём?</string>
+    <string name="back">Назад</string>
+    <string name="settings">Настройки</string>
+    <string name="forward">Перейти</string>
+</resources>
