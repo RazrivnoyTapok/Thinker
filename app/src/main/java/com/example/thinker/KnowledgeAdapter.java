@@ -1,5 +1,6 @@
 package com.example.thinker;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -53,8 +54,20 @@ public class KnowledgeAdapter extends RecyclerView.Adapter<KnowledgeAdapter.View
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.getTitle().setText(dataSet.get(position).getCardTitle());
-        holder.getDescription().setText(dataSet.get(position).getCardDescription());
+        Knowledge knowledge = dataSet.get(position);
+
+        holder.getTitle().setText(knowledge.getCardTitle());
+        holder.getDescription().setText(knowledge.getCardDescription());
+
+        holder.getToKnowledge().setOnClickListener(v -> {
+            Intent intent = new Intent(v.getContext(), KnowledgeActivity.class);
+
+            intent.putExtra("knowledge_id", knowledge.getId());
+            intent.putExtra("knowledge_title", knowledge.getCardTitle());
+            intent.putExtra("knowledge_description", knowledge.getCardDescription());
+
+            v.getContext().startActivity(intent);
+        });
     }
 
     @Override

@@ -35,8 +35,8 @@ public class ListActivity extends AppCompatActivity {
         int marginInDp = 10;
         int marginInPx = dpToPx(marginInDp);
 
-        Knowledge banana = new Knowledge("banana", "banana desc", new TextView(this));
-        Knowledge apple = new Knowledge("apple", "apple desc", new TextView(this));
+        Knowledge banana = new Knowledge("banana", "banana desc", new TextView(this), Knowledge.TYPE_BANANA);
+        Knowledge apple = new Knowledge("apple", "apple desc", new TextView(this), Knowledge.TYPE_APPLE);
 
         ArrayList<Knowledge> data = new ArrayList<>(List.of(banana, apple));
         KnowledgeAdapter adapter = new KnowledgeAdapter(data);
