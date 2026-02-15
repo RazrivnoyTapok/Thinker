@@ -1,6 +1,7 @@
 package com.example.thinker;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
@@ -35,13 +36,14 @@ public class ListActivity extends AppCompatActivity {
         int marginInPx = dpToPx(marginInDp);
 
         Knowledge banana = new Knowledge("banana", "banana desc", new TextView(this));
-        Knowledge apple = new Knowledge("banana", "banana desc", new TextView(this));
+        Knowledge apple = new Knowledge("apple", "apple desc", new TextView(this));
 
         ArrayList<Knowledge> data = new ArrayList<>(List.of(banana, apple));
+        KnowledgeAdapter adapter = new KnowledgeAdapter(data);
 
         RecyclerView recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        recyclerView.setAdapter(new KnowledgeAdapter(data));
+        recyclerView.setAdapter(adapter);
 
         recyclerView.addItemDecoration(new CardItemDecoration(marginInPx));
     }

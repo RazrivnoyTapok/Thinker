@@ -59,6 +59,6 @@ public class KnowledgeAdapter extends RecyclerView.Adapter<KnowledgeAdapter.View
 
     @Override
     public int getItemCount() {
-        return 0;
+        return dataSet.size();
     }
 }
