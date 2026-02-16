@@ -1,22 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:id="@+id/item_menu_la_add"
-        android:title="@string/add_knowledge"
-        android:onClick="dummyMethod">
+        android:title="@string/add_knowledge">
     </item>
 
     <item android:id="@+id/item_menu_la_set"
-        android:title="@string/settings"
-        android:onClick="toSettings">
+        android:title="@string/settings">
     </item>
 
     <item android:id="@+id/item_menu_la_lib"
-        android:title="@string/tag_library"
-        android:onClick="toLibrary">
+        android:title="@string/tag_library">
     </item>
 
     <item android:id="@+id/item_menu_la_exp"
-        android:title="@string/export"
-        android:onClick="dummyMethod">
+        android:title="@string/export">
     </item>
 </menu>

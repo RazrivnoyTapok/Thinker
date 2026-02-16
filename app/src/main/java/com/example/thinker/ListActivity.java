@@ -2,11 +2,10 @@ package com.example.thinker;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
+import android.util.Log;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.PopupMenu;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -32,15 +31,12 @@ public class ListActivity extends AppCompatActivity {
             return insets;
         });
 
-        // Back button
         ImageButton btn_back = findViewById(R.id.button_back);
         btn_back.setOnClickListener(v -> finish());
-        // Menu
-        // Menu button
+
         ImageButton btn_menu = findViewById(R.id.button_menu);
-        btn_menu.setOnClickListener(v -> {
-        });
-        // Recycler
+        btn_menu.setOnClickListener(this::showMenu);
+
         int marginInDp = 10;
         int marginInPx = dpToPx(marginInDp);
 
@@ -57,45 +53,34 @@ public class ListActivity extends AppCompatActivity {
         recyclerView.addItemDecoration(new CardItemDecoration(marginInPx));
     }
 
+    private void showMenu(android.view.View v) {
+        PopupMenu popupMenu = new PopupMenu(this, v);
+        popupMenu.getMenuInflater().inflate(R.menu.menu_list_activity, popupMenu.getMenu());
+        popupMenu.setOnMenuItemClickListener(item -> {
+            int itemId = item.getItemId();
+            if (itemId == R.id.item_menu_la_add) {
+                Intent intent = new Intent(ListActivity.this, AddKnowledgeActivity.class);
+                startActivity(intent);
+                return true;
+            } else if (itemId == R.id.item_menu_la_lib) {
+                Intent intent = new Intent(ListActivity.this, LibraryActivity.class);
+                startActivity(intent);
+                return true;
+            } else if (itemId == R.id.item_menu_la_set) {
+                Intent intent = new Intent(ListActivity.this, SettingsActivity.class);
+                startActivity(intent);
+                return true;
+            } else if (itemId == R.id.item_menu_la_exp) {
+                Intent intent = new Intent(ListActivity.this, ExportActivity.class);
+                startActivity(intent);
+                return true;
+            }
+            return false;
+        });
+        popupMenu.show();
+    }
+
     public int dpToPx(int dp) {
         return (int) (dp * getResources().getDisplayMetrics().density);
-    }
-    public void toSettings(MenuItem mi) {
-        Intent intent = new Intent(ListActivity.this, SettingsActivity.class);
-        startActivity(intent);
-    }
-    public void toLibrary(MenuItem mi) {
-        Intent intent = new Intent(ListActivity.this, LibraryActivity.class);
-        startActivity(intent);
-    }
-    public void dummyMethod(MenuItem mi) {
-
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu_list_activity, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.item_menu_la_add:
-                dummyMethod(item);
-                return true;
-            case R.id.item_menu_la_set:
-                toSettings(item);
-                return true;
-            case R.id.item_menu_la_lib:
-                toLibrary(item);
-                return true;
-            case R.id.item_menu_la_exp:
-                dummyMethod(item);
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
-        }
     }
 }
