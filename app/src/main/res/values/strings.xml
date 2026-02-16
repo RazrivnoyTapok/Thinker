@@ -5,4 +5,7 @@
     <string name="back">Назад</string>
     <string name="settings">Настройки</string>
     <string name="forward">Перейти</string>
+    <string name="add_knowledge">Добавить знание</string>
+    <string name="tag_library">Библиотека тегов</string>
+    <string name="export">Экспорт</string>
 </resources>

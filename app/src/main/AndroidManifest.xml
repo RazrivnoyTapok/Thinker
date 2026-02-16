@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Thinker">
         <activity
+            android:name=".LibraryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SettingsActivity"
+            android:exported="false" />
+        <activity
             android:name=".KnowledgeActivity"
             android:exported="false" />
         <activity
