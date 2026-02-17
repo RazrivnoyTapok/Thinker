@@ -7,4 +7,100 @@
     android:layout_height="match_parent"
     tools:context=".AddKnowledgeActivity">
 
+    <ImageButton
+        android:id="@+id/button_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:background="@drawable/shape_btn_circle"
+        app:srcCompat="@drawable/baseline_arrow_back_24"
+
+        android:contentDescription="@string/back"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.025"
+        app:layout_constraintHorizontal_bias="0.05"/>
+
+    <ImageButton
+        android:id="@+id/button_add_photo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:background="@drawable/shape_btn_circle"
+        app:srcCompat="@drawable/baseline_add_photo_alternate_24"
+
+        android:contentDescription="@string/add_photo"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.025"
+        app:layout_constraintHorizontal_bias="0.95"/>
+
+    <ImageButton
+        android:id="@+id/button_add_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:background="@drawable/shape_btn_circle"
+        app:srcCompat="@drawable/baseline_text_fields_24"
+
+        android:contentDescription="@string/add_text"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.025"
+        app:layout_constraintHorizontal_bias="0.75"/>
+
+    <ImageButton
+        android:id="@+id/button_add_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:background="@drawable/shape_btn_circle"
+        app:srcCompat="@drawable/outline_format_list_numbered_24"
+
+        android:contentDescription="@string/add_list"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.025"
+        app:layout_constraintHorizontal_bias="0.55"/>
+
+    <EditText
+        android:id="@+id/edit_name"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:ems="16"
+        android:inputType="text"
+        android:text="@string/name"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.125"
+        app:layout_constraintHorizontal_bias="0.5"/>
+
+    <EditText
+        android:id="@+id/edit_description"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:ems="16"
+        android:inputType="text"
+        android:text="@string/description"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.2"
+        app:layout_constraintHorizontal_bias="0.5"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -8,4 +8,9 @@
     <string name="add_knowledge">Добавить знание</string>
     <string name="tag_library">Библиотека тегов</string>
     <string name="export">Экспорт</string>
+    <string name="add_photo">Добавить картинку</string>
+    <string name="add_text">Добавить текст</string>
+    <string name="add_list">Добавить список</string>
+    <string name="name">Название</string>
+    <string name="description">Описание</string>
 </resources>

@@ -1,6 +1,7 @@
 package com.example.thinker;
 
 import android.os.Bundle;
+import android.widget.ImageButton;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,5 +21,8 @@ public class AddKnowledgeActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        ImageButton btn_back = findViewById(R.id.button_back);
+        btn_back.setOnClickListener(v -> finish());
     }
 }

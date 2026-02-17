@@ -1,6 +1,7 @@
 package com.example.thinker;
 
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.ImageButton;
